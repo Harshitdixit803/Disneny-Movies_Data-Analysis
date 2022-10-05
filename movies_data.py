@@ -7,34 +7,28 @@ df["release_date"] = pd.to_datetime(df["release_date"], infer_datetime_format=Tr
 df["year"] = df["release_date"].dt.year
 
 
-# print(df)
-# plt.figure(figsize=(12, 8)) 
-# plt.xticks(rotation=90)
-# plt.title('Disney movies per year')
-# sns.histplot(df['year'], kde=True)
-
 
 '''countplot for ratings'''
-# plt.figure(figsize=(10,10))
-# plt.title('Disney movies rating')
-# sns.countplot(x='mpaa_rating', data=df)
-# plt.xlabel('rating')
+plt.figure(figsize=(10,10))
+plt.title('Disney movies rating')
+sns.countplot(x='mpaa_rating', data=df)
+plt.xlabel('rating')
 
 
 '''count of movies according to the genres'''
-# plt.figure(figsize=(10, 6)) 
-# plt.title('Disney movies genres')
-# sns.countplot(y='genre', data=df)
+plt.figure(figsize=(10, 6)) 
+plt.title('Disney movies genres')
+sns.countplot(y='genre', data=df)
 
 avg_genre = df.groupby('genre').mean()
 
 
 '''Evolution of movies gross with time using lineplot'''
-# plt.figure(figsize=(12, 6))
-# plt.title('Evolution of movies gross with time') 
-# plt.xlabel('release date')
-# plt.ylabel('total gross')
-# sns.lineplot(x='release_date', y='total_gross', data=df)
+plt.figure(figsize=(12, 6))
+plt.title('Evolution of movies gross with time') 
+plt.xlabel('release date')
+plt.ylabel('total gross')
+sns.lineplot(x='release_date', y='total_gross', data=df)
 
 
 
