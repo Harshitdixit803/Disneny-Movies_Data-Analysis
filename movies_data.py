@@ -39,10 +39,10 @@ avg_genre = df.groupby('genre').mean()
 
 
 '''Evolution of movies gross with time adjusted by inflation using lineplot'''
-# plt.figure(figsize=(12, 6))
-# plt.title('Evolution of movies gross with time adjusted by inflation')
-# plt.xlabel('release date')
-# plt.ylabel('inflation adjusted gross')
-# sns.lineplot(x='release_date', y='inflation_adjusted_gross', data=df)
+plt.figure(figsize=(12, 6))
+plt.title('Evolution of movies gross with time adjusted by inflation')
+plt.xlabel('release date')
+plt.ylabel('inflation adjusted gross')
+sns.lineplot(x='release_date', y='inflation_adjusted_gross', data=df)
 
 plt.show()
